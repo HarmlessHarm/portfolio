@@ -1,0 +1,6 @@
+@mixin perspective($var) {
+	-webkit-perspective: $var;
+	   -moz-perspective: $var;
+	     -o-perspective: $var;
+		    perspective: $var;
+}
