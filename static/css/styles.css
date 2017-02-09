@@ -1,40 +1,102 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, html {
   height: 100%;
   width: 100%;
   background-color: #263238;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  position: relative;
 }
 
-button {
+/* Nav bar */
+#nav-bar {
+  height: 50px;
+  background: lightgrey;
+}
+
+#nav-bar #nav-controls {
+  height: 100%;
+  float: right;
+}
+
+#nav-bar span {
+  position: relative;
+  display: block;
+  float: left;
   cursor: pointer;
   font-weight: bold;
   min-width: 100px;
-  height: 50px;
-  font-size: 14px;
-  transition: font-size 0.2s ease;
-}
-
-button:hover {
   font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+  margin: 0 10px;
   transition: font-size 0.2s ease;
 }
 
 /* Cube positioning */
-.cube-container {
+#content-wrapper {
+  height: calc(100% - 50px);
+}
+
+#content-wrapper #cube-container {
   width: 500px;
   height: 500px;
   position: fixed;
-  top: calc(50% - 250px);
-  left: calc(50% - 250px);
+  top: 50%;
+  left: 50%;
   transition-duration: 2s;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   -o-perspective: 1000px;
   perspective: 1000px;
+  transform: translate(-50%, -50%);
 }
 
-.cube-container #cube {
+#content-wrapper #cube-container #cube {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -48,7 +110,7 @@ button:hover {
   transition: transform 1.5s;
 }
 
-.cube-container #cube figure {
+#content-wrapper #cube-container #cube figure {
   margin: auto;
   cursor: pointer;
   display: block;
@@ -67,30 +129,35 @@ button:hover {
   /*transition-duration: 1s ;*/
 }
 
-.cube-container #cube figure.zoomed {
+#content-wrapper #cube-container #cube figure.zoomed {
   opacity: 1;
   cursor: default;
 }
 
-.cube-container #cube .side img {
+#content-wrapper #cube-container #cube figure p {
+  position: relative;
+  top: 50px;
+}
+
+#content-wrapper #cube-container #cube .side img {
   height: 65%;
   position: relative;
   top: 40px;
   transition: opacity 1s;
 }
 
-.cube-container #cube .side img.zoomed img {
+#content-wrapper #cube-container #cube .side img.zoomed img {
   opacity: 0;
 }
 
-.cube-container #cube .bottom img {
+#content-wrapper #cube-container #cube .bottom img {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.cube-container #cube .top img {
+#content-wrapper #cube-container #cube .top img {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
@@ -106,58 +173,7 @@ button:hover {
   right: 0;
   width: 100%;
 }*/
-#show-buttons.zoomed #left-button-bar {
-  left: 100px;
-}
-
-#show-buttons.zoomed #right-button-bar {
-  right: 100px;
-}
-
 /* Buttons */
-button.animate {
-  cursor: pointer;
-  font-weight: bold;
-  width: 100px;
-  height: 50px;
-  margin: 58.3px 0 58.3px 0;
-}
-
-button#toggle-backface-visibility {
-  display: none;
-  position: fixed;
-  top: calc(100% - 150px);
-  left: calc(50% - 75px);
-  width: 150px;
-  height: 50px;
-}
-
-#toggle-opacity {
-  width: 150px;
-  height: 50px;
-  margin: auto;
-}
-
-#show-buttons #left-button-bar {
-  float: left;
-  position: fixed;
-  left: calc(50% - 450px);
-  top: calc(50% - 250px);
-  height: 500px;
-  width: 100px;
-  transition-duration: 2s;
-}
-
-#show-buttons #right-button-bar {
-  float: right;
-  position: fixed;
-  right: calc(50% - 450px);
-  top: calc(50% - 250px);
-  height: 500px;
-  width: 100px;
-  transition-duration: 2s;
-}
-
 /***************************************
  * DONT TOUCH ANYTHING BELOW THIS!!!!!!*
  ***************************************/

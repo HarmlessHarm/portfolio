@@ -1,63 +1,73 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  
-  <!-- disable zooming -->
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
-  
-  <title>Harm Manders</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="./static/css/styles.css" media="screen" />
+	<meta charset="utf-8" />
 
-  <!-- load js libs -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<!-- disable zooming -->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
 
-  <!-- load custom js -->
-  <script type="text/javascript" src="./static/js/zoom-box.js"></script>
-  <script src="./static/js/utils.js"></script>
-  <script src="./static/js/rotate-box.js"></script>
+	<title>Harm Manders</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="./static/css/styles.css" media="screen" />
+
+	<!-- load js libs -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<!-- load custom js -->
+	<script type="text/javascript" src="./static/js/zoom-box.js"></script>
+	<script src="./static/js/utils.js"></script>
+	<script src="./static/js/rotate-box.js"></script>
 
 </head>
 <body>
-  <section id="nav-bar">
-    
-  </section>
-  <section class="cube-container">
-    <div id="cube" class="show-front">
-      <figure class="front side"><img src="./static/images/icons/home.svg" ><p>Home</p></figure>
-      <figure class="back side"><img src="./static/images/icons/contact.svg"><p>Contact</p></figure>
-      <figure class="right side"><img src="./static/images/icons/profile.svg"><p>Profile</p></figure>
-      <figure class="left side"><img src="./static/images/icons/arrow_down.svg"><p>Present</p></figure>
-      <figure class="top side"><img src="./static/images/icons/arrow_down.svg"><p>Future</p></figure>
-      <figure class="bottom side"><img src="./static/images/icons/arrow_down.svg"><p>History</p></figure>
-    </div>
-  </section>
+	<section id="nav-bar">
+		<div id="nav-controls">
+			<span class="show-front animate">Home</span>
+			<span class="show-right animate">Profile</span>
+			<span class="show-back animate">Contact</span>
+			<span class="show-bottom animate">History</span>
+			<span class="show-left animate">Present</span>
+			<span class="show-top animate">Future</span>
+		</div>
+	</section>
+	<section id="content-wrapper">
+		<div id="cube-container">
+			<div id="cube" class="show-front">
+				<figure class="front side"><img src="./static/images/icons/home.svg" ><p>Home</p></figure>
+				<figure class="back side"><img src="./static/images/icons/contact.svg"><p>Contact</p></figure>
+				<figure class="right side"><img src="./static/images/icons/profile.svg"><p>Profile</p></figure>
+				<figure class="left side"><img src="./static/images/icons/arrow_down.svg"><p>Present</p></figure>
+				<figure class="top side"><img src="./static/images/icons/arrow_down.svg"><p>Future</p></figure>
+				<figure class="bottom side"><img src="./static/images/icons/arrow_down.svg"><p>History</p></figure>
+			</div>
+		</div>
+		
+	</section>
 
-  <section id="buttons">
-    <div id="show-buttons">
-      <div id="left-button-bar">
-        <button class="show-front animate">Home</button>
-        <button class="show-right animate">Profile</button>
-        <button class="show-back animate">Contact</button>
-      </div>
-      <div id="right-button-bar">
-        <button class="show-bottom animate">History</button>
-        <button class="show-left animate">Present</button>
-        <button class="show-top animate">Future</button>
-      </div>
-    </div>
+	<!-- <section id="buttons">
+		<div id="show-buttons">
+			<div id="left-button-bar">
+				<button class="show-front animate">Home</button>
+				<button class="show-right animate">Profile</button>
+				<button class="show-back animate">Contact</button>
+			</div>
+			<div id="right-button-bar">
+				<button class="show-bottom animate">History</button>
+				<button class="show-left animate">Present</button>
+				<button class="show-top animate">Future</button>
+			</div>
+		</div>
 
-    <div id="toggle-opacity">
-      <button id="toggle-backface-visibility">Toggle Opacity</button>
-    </div>
-
-
-  </section>
+		<div id="toggle-opacity">
+			<button id="toggle-backface-visibility">Toggle Opacity</button>
+		</div>
 
 
-<!-- Major credits to David DeSandro for his awesome tutorial to create 3D cubes with CSS3 -->
+	</section>
+
+ -->
+	<!-- Major credits to David DeSandro for his awesome tutorial to create 3D cubes with CSS3 -->
 
 </body>
 </html>

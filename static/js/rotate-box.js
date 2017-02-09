@@ -1,6 +1,6 @@
 var init = function() {
-  var box = document.querySelector('.cube-container').children[0],
-      showPanelButtons = document.querySelectorAll('#show-buttons button'),
+  var box = document.querySelector('#cube-container').children[0],
+      showPanelButtons = document.querySelectorAll('#nav-controls button'),
       panelClassName = 'show-front',
 
       onButtonClick = function( event ){
